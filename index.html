@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Aplikasi Cuaca 🌦️</h1>
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Cari kota..." required>
+                <button type="submit">Cari</button>
+            </form>
+            <button id="detect-location-btn">Gunakan Lokasi Saat Ini</button>
+        </header>
+
+        <main>
+            <section id="weather-card" class="card">
+                <h2 id="location">Cari lokasi untuk memulai</h2>
+                <p id="date-time"></p>
+                <div class="weather-main">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="ikon cuaca" id="weather-icon">
+                    <div class="temp-container">
+                        <span id="temperature">--</span>
+                        <span id="unit">°C</span>
+                    </div>
+                    <p id="description">---</p>
+                </div>
+            </section>
+
+            <section id="weather-details" class="card">
+                <h3>Detail Cuaca</h3>
+                <div class="details-grid">
+                    <div>
+                        <p>Kelembapan</p>
+                        <p id="humidity">--%</p>
+                    </div>
+                    <div>
+                        <p>Kecepatan Angin</p>
+                        <p id="wind-speed">-- km/j</p>
+                    </div>
+                    <div>
+                        <p>Matahari Terbit</p>
+                        <p id="sunrise">--:--</p>
+                    </div>
+                    <div>
+                        <p>Matahari Terbenam</p>
+                        <p id="sunset">--:--</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="forecast-section" class="card">
+                <h3>Perkiraan 5 Hari ke Depan</h3>
+                <div id="forecast-container">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* --- Gaya Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- Header & Pencarian --- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+#search-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#city-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#search-form button, #detect-location-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #fca311;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:hover, #detect-location-btn:hover {
+    background-color: #e85d04;
+}
+
+#detect-location-btn {
+    margin-top: 10px;
+    background-color: #4CAF50; /* Warna berbeda untuk membedakan */
+}
+
+/* --- Gaya Kartu Umum --- */
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- Kartu Cuaca Utama --- */
+#weather-card {
+    text-align: center;
+}
+
+#location {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+#date-time {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temp-container {
+    display: flex;
+}
+
+#temperature {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+#unit {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#description {
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+
+/* --- Detail Cuaca & Perkiraan --- */
+.details-grid, #forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.details-grid > div p:first-child {
+    font-weight: 500;
+    color: #555;
+}
+
+.details-grid > div p:last-child {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.forecast-card img {
+    width: 60px;
+    height: 60px;
+}
+
+.forecast-card p {
+    margin: 5px 0;
+}
+
+.forecast-temp {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* --- Responsivitas --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    #location {
+        font-size: 2em;
+    }
+
+    .weather-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #temperature {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-form {
+        flex-direction: column;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
