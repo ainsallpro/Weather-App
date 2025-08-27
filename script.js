@@ -1,9 +1,7 @@
-// Tunggu hingga seluruh konten halaman dimuat sebelum menjalankan skrip
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- BAGIAN 1: INISIALISASI & VARIABEL ---
-
-    // Ganti dengan API key kamu dari OpenWeatherMap
+    
     const apiKey = '9a332a040cd3f9f8bcb0b0e2cb27bb08'; 
 
     // Referensi ke elemen-elemen HTML
@@ -163,4 +161,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Inisialisasi awal ---
     // Coba deteksi lokasi saat pertama kali membuka halaman
     detectLocationBtn.click();
+
 });
